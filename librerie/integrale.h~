@@ -1,0 +1,2 @@
+double trapezio (double a, double b, int n, double(*f)(double));
+double simpson (double a, double b, int n, double(*f)(double));

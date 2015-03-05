@@ -1,0 +1,3 @@
+gcc -c coeff.c
+gcc -lm coeff.o ../librerie/integrali.o -lm -o coeff.out
+./coeff.out>data.csv
