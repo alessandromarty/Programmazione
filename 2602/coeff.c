@@ -5,7 +5,7 @@
 //devo moltiplicare B(T) per sigma^3!!
 
 double f(double x, double T) {
-return (pow(x/(1-x),2))*(exp(-4/T*(pow((x/(1-x)),-12)-pow((x/(1-x)),-6)))-1)/(pow((1-x*x),1));
+return (pow(1/(1-x),2))*(exp(-4/T*(pow((x/(1-x)),-12)-pow((x/(1-x)),-6)))-1)*pow((x/(1-x)),2);
 //return (pow(x,2)*(exp(-(4/T)*(pow(x,-12)-pow(x,-6)))-1));
 //return((exp(-(4/T)*(pow(x,-12)-pow(x,-6)))-1));
 }

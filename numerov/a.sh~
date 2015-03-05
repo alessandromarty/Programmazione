@@ -1,0 +1,5 @@
+gcc -c casaculo.c
+gcc -lm casaculo.o ../librerie/funzioni.o -lm -o casascemo.out
+./casascemo.out>../grafici/Numerov/dati_numerov.csv	
+cd ../grafici/Numerov
+python3 numerov.py

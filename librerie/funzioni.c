@@ -116,5 +116,58 @@ return x;
 
 
 
+double bisezione_par (double a, double b, double err,double par, double(*f)(double,double)) {
+double x;
+	while(fabs(b-a)>err) {
+	x=(a+b)/2;
+		if ((f(x,par)*f(a,par))>0) {
+		a=x;
+		b=b;
+		}
+		else {
+		a=a;
+		b=x;
+		}
+	}	
+return x;
+}
+
+
+double max_par (double a, double b, double err,double par, double(*f)(double,double)) {
+double x,y;
+	while(fabs(b-a)>err) {
+	x=a+(b-a)*1/3;
+	y=a+(b-a)*2/3;
+		if (f(x,par)>f(y,par)) {
+		a=a;
+		b=y;
+		}
+		else {
+		a=x;
+		b=b;
+		}
+	}
+	x=(a+b)/2;
+return x;
+}
+
+
+double min_par (double a, double b, double err,double par, double(*f)(double,double)) {
+double x,y;
+	while(fabs(b-a)>err) {
+	x=a+(b-a)*1/3;
+	y=a+(b-a)*2/3;
+		if (-f(x,par)>-f(y,par)) {
+		a=a;
+		b=y;
+		}
+		else {
+		a=x;
+		b=b;
+		}
+	}
+	x=(a+b)/2;
+return x;
+}
 
 
